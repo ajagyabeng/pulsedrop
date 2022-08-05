@@ -7,13 +7,13 @@ from dotenv import load_dotenv
 
 load_dotenv()  # take environment variables from .env.
 
-APP_SECRET_KEY = 'ANMEIAEGOIWHAWW4W9JWJFIW9TU9W9WUT99jsidnskni'
+APP_SECRET_KEY = os.getenv('APP_SECRET_KEY')
 DB_USERNAME = os.getenv('DB_USERNAME')
 DB_PASSWORD = os.getenv('DB_PASSWORD')
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = APP_SECRET_KEY
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:0501@localhost:5432/nft_cards_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{DB_USERNAME}:{DB_PASSWORD}@localhost:5432/nft_cards_db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 Bootstrap5(app)
 db = SQLAlchemy(app)
