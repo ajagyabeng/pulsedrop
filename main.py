@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, url_for, redirect, jsonify
 from flask_sqlalchemy import SQLAlchemy
-from flask_bootstrap import Bootstrap5
+from flask_bootstrap import Bootstrap
 import os
 from dotenv import load_dotenv
 
@@ -14,7 +14,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('APP_SECRET_KEY')
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-Bootstrap5(app)
+Bootstrap(app)
 db = SQLAlchemy(app)
 
 # value to be placed in here from the filter function and used to fine tune filter queries
