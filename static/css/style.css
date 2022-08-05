@@ -1,0 +1,169 @@
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+article {
+  padding-top: 100px;
+}
+
+/* NAVBAR STYLING */
+#main-logo {
+  padding-left: 20px;
+}
+
+.fa-hive {
+  color: #751d9f;
+}
+
+.right-nav {
+  padding-right: 22px;
+}
+
+.nav-position {
+  background-color: #fff;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.favorite-btn {
+  color: #3f1046;
+  border: 2px solid;
+  padding: 12px;
+  border-radius: 100%;
+  margin: 10px 3px;
+  border-color: #f1f2f499;
+}
+
+.favorite-btn:hover {
+  border-color: #9761b042;
+  color: #751d9f;
+}
+
+#chrome-btn {
+  background-color: #f1f2f499;
+  padding: 10px;
+  margin: 10px 5px;
+  border-radius: 15px;
+}
+
+#chrome-text {
+  margin: 6px;
+}
+
+#search {
+  width: 220px;
+  height: 45px;
+  border-radius: 10px;
+  border: 2px solid #f1f2f499;
+  background-color: #f1f2f499;
+  text-align: center;
+}
+
+#search:focus {
+  border-color: #3f1046;
+  border: 2px;
+}
+
+
+
+/* NFT CARD STYLING */
+
+.nft-card {
+  width: auto;
+  transition: 0.8s all;
+  cursor: pointer;
+}
+
+.nft-card:hover {
+  box-shadow: 1px 1px 20px #d4d7e099;
+}
+
+.small-blockchain-img {
+  width: 30px;
+  background-color: #f1f2f499;
+  padding: 8px 6px 6px;
+  border-radius: 60px;
+  margin-left: 6px;
+}
+
+.nft-card-img {
+  border-radius: 12px;
+}
+
+.card-text-wrap {
+  display: inline-block;
+  margin-right: 42px;
+}
+
+.nft-card-text {
+  margin: 0 0 5px;
+}
+
+.nft-status {
+  display: flex;
+  background-color: #f1f2f499;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.live-status-color {
+  color: #517e04;
+  background-color: #f3fee1;
+}
+
+.fa-fire-flame-simple {
+  padding-right: 2px;
+}
+
+.like-btn {
+  font-size: 8px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a .liked {
+  background-color: #ff6a44;
+  color: #fff;
+}
+
+a .not-liked {
+  background-color: #fff;
+  color: black;
+  border-color: #f1f2f499;
+  border-style: solid;
+  border-width: 1px;
+}
+
+a .not-liked:hover {
+  background-color: #f1f2f499;
+}
+
+
+/* ABOUT SECTION */
+.about-section {
+  /* padding-right: 50px; */
+  text-align: left;
+  padding-right: 50px;
+}
+
+.light {
+  font-size: 12px;
+  color: #6b7b8a;
+  line-height: 1.5;
+}
+
+.fav-about {
+  text-align: left;
+  padding-left: 50px;
+  padding-right: 30px;
+}
