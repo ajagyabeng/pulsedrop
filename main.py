@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, url_for, redirect, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_bootstrap import Bootstrap5
-import psycopg2
 import os
 from dotenv import load_dotenv
 
