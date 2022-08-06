@@ -1,20 +1,20 @@
 from flask import Flask, render_template, request, url_for, redirect, jsonify
 from flask_sqlalchemy import SQLAlchemy
-from flask_bootstrap import Bootstrap
+from flask_bootstrap import Bootstrap5
 import os
 from dotenv import load_dotenv
 
 load_dotenv()  # take environment variables from .env.
 
-# APP_SECRET_KEY = os.getenv('APP_SECRET_KEY')
-# DB_USERNAME = os.getenv('DB_USERNAME')
-# DB_PASSWORD = os.getenv('DB_PASSWORD')
+APP_SECRET_KEY = os.getenv('APP_SECRET_KEY')
+DB_USERNAME = os.getenv('DB_USERNAME')
+DB_PASSWORD = os.getenv('DB_PASSWORD')
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('APP_SECRET_KEY')
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-Bootstrap(app)
+Bootstrap5(app)
 db = SQLAlchemy(app)
 
 # value to be placed in here from the filter function and used to fine tune filter queries
