@@ -46,7 +46,6 @@ class NftCards(db.Model):
 # db.session.add(cards)
 # db.session.commit()
 
-
 @app.route('/')
 def home():
     # ordering by id makes sure that they always appear in the right order even after implementing and event listener in JS.
