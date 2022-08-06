@@ -7,12 +7,11 @@ from dotenv import load_dotenv
 load_dotenv()  # take environment variables from .env.
 
 APP_SECRET_KEY = os.getenv('APP_SECRET_KEY')
-DB_USERNAME = os.getenv('DB_USERNAME')
-DB_PASSWORD = os.getenv('DB_PASSWORD')
+DATABASE_URI = os.getenv('DATABASE_URI')
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv('APP_SECRET_KEY')
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
+app.config['SECRET_KEY'] = APP_SECRET_KEY
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 Bootstrap5(app)
 db = SQLAlchemy(app)
