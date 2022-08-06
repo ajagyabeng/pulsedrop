@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, url_for, redirect, jsonify
 from flask_sqlalchemy import SQLAlchemy
-from flask_bootstrap import Bootstrap5
+from flask_bootstrap import Bootstrap
 import os
 from dotenv import load_dotenv
 
@@ -17,7 +17,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = APP_SECRET_KEY
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-Bootstrap5(app)
+Bootstrap(app)
 db = SQLAlchemy(app)
 
 
