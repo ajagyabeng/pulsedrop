@@ -4,6 +4,10 @@ from flask_bootstrap import Bootstrap5
 import os
 from dotenv import load_dotenv
 
+
+# value to be placed in here from the filter function and used to fine tune filter queries
+FILTER_KIND = ""
+
 load_dotenv()  # take environment variables from .env.
 
 APP_SECRET_KEY = os.getenv('APP_SECRET_KEY')
@@ -15,9 +19,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 Bootstrap5(app)
 db = SQLAlchemy(app)
-
-# value to be placed in here from the filter function and used to fine tune filter queries
-FILTER_KIND = ""
 
 
 class NftCards(db.Model):
@@ -128,6 +129,7 @@ def filter_cards():
 
 @app.route('/blc_filter')
 def blc_filter():
+    """filters the nft cards by their blockchain and general filter status: LIVE, UPCOMING OR ALL"""
     filter_type = request.args.get('filter_blc')
     if FILTER_KIND == "" or FILTER_KIND == "All":
         result = NftCards.query.filter_by(blockchain=filter_type).all()
