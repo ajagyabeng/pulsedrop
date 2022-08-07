@@ -36,27 +36,27 @@ class NftCards(db.Model):
 
 cards_list = [
     NftCards(
-    card_name='Weather Report',
-    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215fd8d24c3b546a072f639_Screenshot%202022-02-23%20at%209.25.23%20AM.png',
-    blockchain='Solana',
+    card_name='Caesar',
+    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f81dabb25015b533246c_929719a6.jpeg',
+    blockchain='Tezos',
     blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f30aab9f8fb7573b0c30_Solana.png',
-    status='Aug 30, 2022',
-    price='0.02'
+    status='Live',
+    price='2'
     ),
     NftCards(
-    card_name='Dark Knight Metaverse',
-    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215fd1e75ab470c9e49e7a1_Screenshot%202022-02-23%20at%209.23.33%20AM.png',
-    blockchain='Solana',
+    card_name='Mobster Ape',
+    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f99575ab47695249ceee_3d7d3030.jpeg',
+    blockchain='Tezos',
     blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f30aab9f8fb7573b0c30_Solana.png',
-    status='Aug 30, 2022',
+    status='Live',
     price='2'
     ),
 ]
 
 
 
-db.session.bulk_save_objects(cards_list)
-db.session.commit()
+# db.session.bulk_save_objects(cards_list)
+# db.session.commit()
 
 @app.route('/')
 def home():
