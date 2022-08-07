@@ -34,17 +34,17 @@ class NftCards(db.Model):
 
 db.create_all()
 
-# cards = NftCards(
-#     card_name='Diplomats of Tezotopia',
-#     card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f70a328ad284821e11ce_64dec28a.png',
-#     blockchain='Tezos',
-#     blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f329e85caa0afe27b26f_Tezos.png',
-#     status='Live',
-#     price='333'
-# )
+cards = NftCards(
+    card_name='Diplomats of Tezotopia',
+    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f70a328ad284821e11ce_64dec28a.png',
+    blockchain='Tezos',
+    blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f329e85caa0afe27b26f_Tezos.png',
+    status='Live',
+    price='333'
+)
 
-# db.session.add(cards)
-# db.session.commit()
+db.session.add(cards)
+db.session.commit()
 
 @app.route('/')
 def home():
