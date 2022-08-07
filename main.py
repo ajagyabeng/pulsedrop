@@ -32,7 +32,7 @@ class NftCards(db.Model):
     price = db.Column(db.String(), default='N/A')
 
 
-# db.create_all()
+db.create_all()
 
 # cards = NftCards(
 #     card_name='Diplomats of Tezotopia',
