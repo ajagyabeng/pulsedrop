@@ -55,8 +55,8 @@ cards_list = [
 
 
 
-# db.session.bulk_save_objects(cards_list)
-# db.session.commit()
+db.session.bulk_save_objects(cards_list)
+db.session.commit()
 
 @app.route('/')
 def home():
