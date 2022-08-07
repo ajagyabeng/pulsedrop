@@ -34,17 +34,53 @@ class NftCards(db.Model):
 
 # db.create_all()
 
-# cards = NftCards(
-#     card_name='Diplomats of Tezotopia',
-#     card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f70a328ad284821e11ce_64dec28a.png',
-#     blockchain='Tezos',
-#     blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f329e85caa0afe27b26f_Tezos.png',
-#     status='Live',
-#     price='333'
-# )
+cards_list = [
+    NftCards(
+    card_name='Based Vitalik',
+    card_img_url='https://assets.website-files.com/6215f2e803b86a29a…5_Screenshot%202022-02-23%20at%209.30.08%20AM.png',
+    blockchain='Ethereum',
+    blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f2fb35b37273f62458f0_Eth.png',
+    status='Live',
+    price='0.06'
+    ),
+    NftCards(
+    card_name='Monkey Heist Club',
+    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215fc6a587a0dc11d50d583_unnamed-6.gif',
+    blockchain='Ethereum',
+    blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f2fb35b37273f62458f0_Eth.png',
+    status='Live',
+    price='0.08'
+    ),
+    NftCards(
+    card_name='Spendee',
+    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215fc0a24c3b51c8b72ecbb_Screenshot%202022-02-23%20at%209.18.56%20AM.png',
+    blockchain='Ethereum',
+    blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f2fb35b37273f62458f0_Eth.png',
+    status='Live',
+    price='0.03'
+    ),
+    NftCards(
+    card_name='M101 Shelter',
+    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215fdf6648e49b71a185037_Screenshot%202022-02-23%20at%209.27.08%20AM.png',
+    blockchain='Ethereum',
+    blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f2fb35b37273f62458f0_Eth.png',
+    status='Aug 23, 2022',
+    price='0.08'
+    ),
+    NftCards(
+    card_name='WonderPals',
+    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215fccf0680e21b792555a6_Screenshot%202022-02-23%20at%209.22.14%20AM.png',
+    blockchain='Ethereum',
+    blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f2fb35b37273f62458f0_Eth.png',
+    status='Aug 23, 2022',
+    price='0.08'
+    ),
+]
 
-# db.session.add(cards)
-# db.session.commit()
+
+
+db.session.bulk_save_objects(cards_list)
+db.session.commit()
 
 @app.route('/')
 def home():
