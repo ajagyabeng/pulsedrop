@@ -36,30 +36,21 @@ class NftCards(db.Model):
 
 cards_list = [
     NftCards(
-    card_name='Owls Cubed',
-    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215ffd1648e495f571857f4_Screenshot%202022-02-23%20at%209.35.05%20AM.png',
-    blockchain='Polygon',
-    blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f334ab137825fcf4182d_Polygon.png',
-    status='Live',
-    price='0.04'
+    card_name='Weather Report',
+    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215fd8d24c3b546a072f639_Screenshot%202022-02-23%20at%209.25.23%20AM.png',
+    blockchain='Solana',
+    blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f30aab9f8fb7573b0c30_Solana.png',
+    status='Aug 30, 2022',
+    price='0.02'
     ),
     NftCards(
-    card_name='Genbun',
-    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215feee03b86a3c28f3c813_Screenshot%202022-02-23%20at%209.31.17%20AM.png',
-    blockchain='Polygon',
-    blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f334ab137825fcf4182d_Polygon.png',
+    card_name='Dark Knight Metaverse',
+    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215fd1e75ab470c9e49e7a1_Screenshot%202022-02-23%20at%209.23.33%20AM.png',
+    blockchain='Solana',
+    blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f30aab9f8fb7573b0c30_Solana.png',
     status='Aug 30, 2022',
-    price='0.06'
+    price='2'
     ),
-    NftCards(
-    card_name='Gollo Adventures',
-    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215ff31361f8aae983dcc43_Screenshot%202022-02-23%20at%209.32.24%20AM.png',
-    blockchain='Polygon',
-    blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f334ab137825fcf4182d_Polygon.png',
-    status='Aug 30, 2022',
-    price='0.05'
-    ),
-    
 ]
 
 
