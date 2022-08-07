@@ -11,7 +11,7 @@ FILTER_KIND = ""
 load_dotenv()  # take environment variables from .env.
 
 APP_SECRET_KEY = os.environ.get('APP_SECRET_KEY')
-DATABASE_URI = os.environ.get('DATABASE_URL1')
+DATABASE_URI = os.environ.get('DATABASE_URL')
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = APP_SECRET_KEY
