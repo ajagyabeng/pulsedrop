@@ -36,51 +36,36 @@ class NftCards(db.Model):
 
 cards_list = [
     NftCards(
-    card_name='Based Vitalik',
-    card_img_url='https://assets.website-files.com/6215f2e803b86a29a…5_Screenshot%202022-02-23%20at%209.30.08%20AM.png',
-    blockchain='Ethereum',
-    blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f2fb35b37273f62458f0_Eth.png',
+    card_name='Owls Cubed',
+    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215ffd1648e495f571857f4_Screenshot%202022-02-23%20at%209.35.05%20AM.png',
+    blockchain='Polygon',
+    blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f334ab137825fcf4182d_Polygon.png',
     status='Live',
+    price='0.04'
+    ),
+    NftCards(
+    card_name='Genbun',
+    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215feee03b86a3c28f3c813_Screenshot%202022-02-23%20at%209.31.17%20AM.png',
+    blockchain='Polygon',
+    blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f334ab137825fcf4182d_Polygon.png',
+    status='Aug 30, 2022',
     price='0.06'
     ),
     NftCards(
-    card_name='Monkey Heist Club',
-    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215fc6a587a0dc11d50d583_unnamed-6.gif',
-    blockchain='Ethereum',
-    blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f2fb35b37273f62458f0_Eth.png',
-    status='Live',
-    price='0.08'
+    card_name='Gollo Adventures',
+    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215ff31361f8aae983dcc43_Screenshot%202022-02-23%20at%209.32.24%20AM.png',
+    blockchain='Polygon',
+    blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f334ab137825fcf4182d_Polygon.png',
+    status='Aug 30, 2022',
+    price='0.05'
     ),
-    NftCards(
-    card_name='Spendee',
-    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215fc0a24c3b51c8b72ecbb_Screenshot%202022-02-23%20at%209.18.56%20AM.png',
-    blockchain='Ethereum',
-    blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f2fb35b37273f62458f0_Eth.png',
-    status='Live',
-    price='0.03'
-    ),
-    NftCards(
-    card_name='M101 Shelter',
-    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215fdf6648e49b71a185037_Screenshot%202022-02-23%20at%209.27.08%20AM.png',
-    blockchain='Ethereum',
-    blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f2fb35b37273f62458f0_Eth.png',
-    status='Aug 23, 2022',
-    price='0.08'
-    ),
-    NftCards(
-    card_name='WonderPals',
-    card_img_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215fccf0680e21b792555a6_Screenshot%202022-02-23%20at%209.22.14%20AM.png',
-    blockchain='Ethereum',
-    blockchain_logo_url='https://assets.website-files.com/6215f2e803b86a29a8f37aba/6215f2fb35b37273f62458f0_Eth.png',
-    status='Aug 23, 2022',
-    price='0.08'
-    ),
+    
 ]
 
 
 
-# db.session.bulk_save_objects(cards_list)
-# db.session.commit()
+db.session.bulk_save_objects(cards_list)
+db.session.commit()
 
 @app.route('/')
 def home():
